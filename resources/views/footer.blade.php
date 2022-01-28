@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="page-footer bg-light font-small blue pt-4" style="clear: both">
+<footer class="page-footer bg-light font-small blue pt-4">
     <!-- Footer Links -->
     <div class="container-fluid text-center text-md-left">
         <!-- Grid row -->

@@ -50,8 +50,10 @@
             height: 400px !important;
         }
         .custom-product {
+            min-height: calc(100vh - 224px - 56px);
             padding-top: 20px;
         }
+
         .slider-text {
             background-color: rgb(4, 36, 58);
         }
@@ -75,6 +77,9 @@
             border-bottom: 1px solid #ccc;
             margin-bottom: 20px;
             padding-bottom: 20px;
+        }
+        .page-footer {
+            clear: both;
         }
     </style>
 </html>
