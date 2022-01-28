@@ -2,7 +2,7 @@
 use App\http\controllers\ProductController;
 $total=0;
 if(Session::has('user')){ $total = ProductController::cartItem(); } ?>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="/">E-Comm</a>
     <button
         class="navbar-toggler"
@@ -21,7 +21,7 @@ if(Session::has('user')){ $total = ProductController::cartItem(); } ?>
             <li class="nav-item active">
                 <a class="nav-link active" href="/">Home</a>
             </li>
-            <li><a class="nav-link" href="#">Orders</a></li>
+            <li><a class="nav-link" href="/myorders">Orders</a></li>
             <form class="form-inline my-2 my-lg-0" action="/search">
                 <input
                     class="form-control mr-sm-2 search-box"
@@ -30,17 +30,14 @@ if(Session::has('user')){ $total = ProductController::cartItem(); } ?>
                     name="query"
                     aria-label="Search"
                 />
-                <button
-                    class="btn btn-outline-success my-2 my-sm-0"
-                    type="submit"
-                >
+                <button class="btn btn-success my-2 my-sm-0" type="submit">
                     Search
                 </button>
             </form>
         </ul>
         <ul class="navbar-nav navbar-right">
             <li>
-                <a class="nav-link" href="#">Cart({{ $total }})</a>
+                <a class="nav-link" href="/cartlist">Cart({{ $total }})</a>
             </li>
             @if(Session::has('user'))
             <li class="nav-item dropdown">
@@ -61,7 +58,10 @@ if(Session::has('user')){ $total = ProductController::cartItem(); } ?>
             </li>
             @else
 
-            <a class="btn btn-default" href="/login">Login</a>
+            <a class="btn btn-primary" style="margin-right: 5px" href="/login"
+                >Login</a
+            >
+            <a class="btn btn-primary" href="/register">Register</a>
             @endif
         </ul>
     </div>
